@@ -40,7 +40,7 @@ resource "aws_instance" "aws-centos-apache" {
 }
 resource "aws_key_pair" "id_rsa" {
   key_name   = "id_rsa"
-  public_key = "${var.ssh_public_key}"
+  public_key = "${file("${var.ssh_public_key}")}"
 }
 
 

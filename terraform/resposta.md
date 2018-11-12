@@ -37,3 +37,21 @@
 36. execução de container apache em uma instancia aws atraves de terraform - cumpriu requisito extra
 
 ## tempo total para execução de todas as etapas: 08:50
+
+#requisitos para execução
+1. terraform
+2. criação de terraform.tfvars
+3. criação de chaves id_rsa
+4. input de parametros região e range ip 
+
+#etapas para reprodução
+1. Criação do terraform.tfvars na seguinte estrutura 
+ - aws_access_key = ""
+ - aws_secret_key = ""
+ - ssh_public_key = "${path_to_keys}"
+ - private_key = "${path_to_keys}"
+2. criação de chaves id_rsa para preencher o terraform.tfvars
+3. execução do commndo terraform init para validar modulo
+4. execução do comando terraform plan para acompanhar comportamento
+ - passar paramentos desejados região e range ip de acesso ssh
+5. execução de comando terraform apply com os parametros desejados

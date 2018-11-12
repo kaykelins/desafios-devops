@@ -3,7 +3,7 @@ variable "aws_access_key" {
 }
 
 variable "private_key" {
-  
+   description = "variavel preenchida por .tfvars"
 }
 
 variable "aws_secret_key" {
